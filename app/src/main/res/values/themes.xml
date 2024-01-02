@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GalleryVaulto" parent="Theme.Material3.DayNight.NoActionBar">
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+<!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/black</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimaryVariant">@color/blue</item>
+
+
+<item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+    <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.GalleryVaulto" parent="Base.Theme.GalleryVaulto" />
+
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/blue</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/white
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/gray
+        </item>
+    </style>
+</resources>

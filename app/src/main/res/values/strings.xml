@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GalleryVaulto</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="change_password">Change Password</string>
+    <string name="feedback_or_suggestion">Feedback or suggestion</string>
+    <string name="move_to_recycle_bin_instead_nof_permanently_deleting">Move to recycle bin instead \nof permanently deleting</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/albumFragment">
+    <action
+        android:id="@+id/action_photosFragment_to_albumFragment"
+        app:destination="@id/albumFragment" />
+    <action
+        android:id="@+id/action_photosFragment_to_videosFragment"
+        app:destination="@id/videosFragment" />
+    <action
+        android:id="@+id/action_videosFragment_to_photosFragment"
+        app:destination="@id/photosFragment" />
+    <action
+        android:id="@+id/action_photosFragment_to_videosFragment2"
+        app:destination="@id/videosFragment" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.galleryvaulto.ui.fragments.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_settingFragment_to_videosFragment"
+            app:destination="@id/videosFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_settingFragment_to_videosFragment"
+        app:destination="@id/videosFragment" />
+    <action
+        android:id="@+id/action_photosFragment_to_albumFragment2"
+        app:destination="@id/albumFragment" />
+    <action
+        android:id="@+id/action_videosFragment_to_photosFragment2"
+        app:destination="@id/photosFragment" />
+    <action
+        android:id="@+id/action_settingFragment_to_videosFragment2"
+        app:destination="@id/videosFragment" />
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="com.example.galleryvaulto.ui.fragments.AlbumFragment"
+        android:label="fragment_album"
+        tools:layout="@layout/fragment_album">
+        <action
+            android:id="@+id/action_albumFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videosFragment"
+        android:name="com.example.galleryvaulto.ui.fragments.VideosFragment"
+        android:label="fragment_videos"
+        tools:layout="@layout/fragment_videos">
+        <action
+            android:id="@+id/action_videosFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_videosFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photosFragment"
+        android:name="com.example.galleryvaulto.ui.fragments.PhotosFragment"
+        android:label="fragment_images"
+        tools:layout="@layout/fragment_images">
+        <action
+            android:id="@+id/action_photosFragment_to_videosFragment"
+            app:destination="@id/videosFragment" />
+        <action
+            android:id="@+id/action_photosFragment_to_albumFragment"
+            app:destination="@id/albumFragment" />
+    </fragment>
+</navigation>

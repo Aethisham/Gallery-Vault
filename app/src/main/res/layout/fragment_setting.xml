@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragments.SettingFragment">
+
+    <ScrollView
+        android:id="@+id/mian_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_6sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/change_pasword_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:background="@drawable/custom_drawable"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/change_pasword_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:background="@drawable/change_password"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/change_pasword_text"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_32ssp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:text="@string/change_password"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/change_pasword_icon"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Feedback_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:background="@drawable/custom_drawable"
+                app:layout_constraintTop_toBottomOf="@id/change_pasword_constraint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/Feedback_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:background="@drawable/feedback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/Feedback_text"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_32ssp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:text="@string/feedback_or_suggestion"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Feedback_icon"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Instruction_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:background="@drawable/custom_drawable"
+                app:layout_constraintTop_toBottomOf="@id/Feedback_constraint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/Instruction_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:background="@drawable/instruction"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/Instruction_text"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_32ssp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:text="Instructions"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Instruction_icon"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/switch_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:background="@drawable/custom_drawable"
+                app:layout_constraintTop_toBottomOf="@id/Instruction_constraint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/playvideo_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:background="@drawable/playvideo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/playvideo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:text="Play video automatically"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toEndOf="@+id/playvideo_icon"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+
+                <Switch
+                    android:id="@+id/playvideo_switch"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UseSwitchCompatOrMaterialXml">
+
+                </Switch>
+
+                <ImageView
+                    android:id="@+id/deletevideo_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:background="@drawable/delete_permant"
+                    app:layout_constraintBottom_toTopOf="@+id/darkicon_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/playvideo_icon" />
+
+                <TextView
+                    android:id="@+id/deletevideo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/move_to_recycle_bin_instead_nof_permanently_deleting"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toEndOf="@+id/deletevideo_icon"
+                    app:layout_constraintTop_toBottomOf="@id/playvideo_text"/>
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch1"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:track="@drawable/custom_switch"
+                    android:thumb="@drawable/resource_switch"
+                    android:theme="@style/SCBSwitch"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/darkicon_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/playvideo_switch"
+                    tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+                <ImageView
+                    android:id="@+id/darkicon_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:background="@drawable/dark_mode"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:text="Dark mode"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/darkicon_icon"
+                    app:layout_constraintTop_toBottomOf="@+id/deletevideo_text">
+
+                </TextView>
+
+                <Switch
+                    android:id="@+id/darkicon_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:theme="@style/SCBSwitch"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:layout_marginVertical="@dimen/_22sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="UseSwitchCompatOrMaterialXml">
+
+                </Switch>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Languageoption_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:background="@drawable/custom_drawable"
+                app:layout_constraintTop_toBottomOf="@id/switch_constraint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/Languageoption_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:background="@drawable/lang_option"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/Languageoption_text"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_32ssp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:text="Language options"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Languageoption_icon"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_32ssp"
+                    android:text="Default"
+                    android:textSize="@dimen/_12ssp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/gray_text_color"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/share_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:background="@drawable/custom_drawable"
+                app:layout_constraintTop_toBottomOf="@id/Languageoption_constraint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/share_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:background="@drawable/share"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/share_text"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_32ssp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:text="Share with firends"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/share_icon"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/privacy_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:background="@drawable/custom_drawable"
+                app:layout_constraintTop_toBottomOf="@id/share_constraint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/privacy_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:background="@drawable/privacy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/privacy_text"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_32ssp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:text="Privacy policy"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/privacy_icon"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
