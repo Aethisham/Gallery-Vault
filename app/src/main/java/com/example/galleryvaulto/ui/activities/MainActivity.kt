@@ -30,11 +30,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        // Inflate the layout using view binding.
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-//
 //        var  windowManager = this.window
 //        windowManager.statusBarColor = ContextCompat.getColor(this,R.color.white)
 //        windowManager.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
@@ -61,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             // Implement the logic for ButtonStart click
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 if (ContextCompat.checkSelfPermission(
-                        this, android.Manifest.permission.READ_MEDIA_VIDEO
+                        this, android.Manifest.permission.READ_MEDIA_IMAGES
                     ) == PackageManager.PERMISSION_GRANTED
                 ) {
                     loadImages()
@@ -94,17 +89,17 @@ class MainActivity : AppCompatActivity() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(
-                    this, Manifest.permission.READ_MEDIA_VIDEO
+                    this, Manifest.permission.READ_MEDIA_IMAGES
                 )
             )
             {
                 ActivityCompat.requestPermissions(
-                    this, arrayOf(Manifest.permission.READ_MEDIA_VIDEO), REQUEST_CODE
+                    this, arrayOf(Manifest.permission.READ_MEDIA_IMAGES), REQUEST_CODE
                 )
             }
             else {
                 ActivityCompat.requestPermissions(
-                    this, arrayOf(Manifest.permission.READ_MEDIA_VIDEO), REQUEST_CODE
+                    this, arrayOf(Manifest.permission.READ_MEDIA_IMAGES), REQUEST_CODE
                 )
             }
         }
@@ -132,7 +127,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Permission Granted", Toast.LENGTH_SHORT).show()
                 loadImages()
             } else {
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_MEDIA_VIDEO) ||
+                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_MEDIA_IMAGES) ||
                     ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                     // Permission permanently denied
                     Toast.makeText(applicationContext, "Permission Denied", Toast.LENGTH_SHORT).show()

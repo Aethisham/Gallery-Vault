@@ -8,7 +8,7 @@ import android.provider.MediaStore
 object VideosGallery {
 
     fun listOfVideos(context: Context): ArrayList<String> {
-        val uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        val uri: Uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI
         val cursor: Cursor?
         val column_index_data: Int
         val listOfAllVideos = ArrayList<String>()
