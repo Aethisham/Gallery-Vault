@@ -31,7 +31,6 @@ class Custom_Album_Adapter (private val mList: ArrayList<ImageDirectoriesList>) 
 
     }
 
-
     class ViewHolder (val binding: AlbumCardViewDesignBinding) : RecyclerView.ViewHolder(binding.root) {
 
     }

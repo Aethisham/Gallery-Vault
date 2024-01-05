@@ -1,21 +1,21 @@
 package com.example.galleryvaulto.ui.fragments
 
 import android.os.Bundle
+import android.os.Environment
+import android.system.Os.accept
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.galleryvaulto.AdapterClass.Custom_Album_Adapter
 import com.example.galleryvaulto.GetImagesFoldersAndTheirPaths
 import com.example.galleryvaulto.ModelClass.ImageDirectoriesList
-import com.example.galleryvaulto.ModelClass.ItemsViewModel
-import com.example.galleryvaulto.R
 import com.example.galleryvaulto.databinding.FragmentAlbumBinding
-import com.example.galleryvaulto.databinding.FragmentImagesBinding
+import java.io.File
+import java.util.Collections
 
 
 class AlbumFragment : Fragment() {
@@ -60,6 +60,7 @@ class AlbumFragment : Fragment() {
 
         for (imageDirectory in pairsList) {
             val folderName = imageDirectory.second
+            Log.d("12335", "onViewCreated: ${imageDirectory.first}",)
             if (folderName != null) {
                 imageDirectoriesList.add(ImageDirectoriesList(folderName))
             }
@@ -67,5 +68,13 @@ class AlbumFragment : Fragment() {
         adapter.notifyDataSetChanged()
     }
 
+
+//    private fun showImageList() {
+//        val file = File("${ Environment.getExternalStorageDirectory()}/WhatsApp Images/")
+//        if (file.exists()) {
+//            val fileListVideo = file.list()
+//            Collections.addAll(arrayList, *fileListVideo)
+//        }
+//    }
 
 }
